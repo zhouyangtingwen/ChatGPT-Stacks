@@ -1,0 +1,33 @@
+
+html, body {
+  background-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  overflow: auto;
+}
+
+.ant-menu-item-active {
+  background-color: red;
+  width: 100px;
+}
+
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: cornflowerblue;
+  border-radius: 0 20px 20px 0 !important;
+  /* width: 100px; */
+  /* transition: all 0.3s; */
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
