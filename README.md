@@ -16,3 +16,14 @@ ChatGPT-Stacks is a powerful desktop application that allows you to save and cat
 - Categorize conversations by topic for easy organization
 - User-friendly interface
 - Simple and intuitive
+
+## Contributing
+We welcome contributions to ChatGPT-Stacks! To contribute, please follow the steps below:
+
+1. Fork this repository
+1. Create a new branch for your contribution
+1. Make your changes
+1. Submit a pull request
+
+# License
+This project is licensed under the terms of the GPL-3.0 license.
