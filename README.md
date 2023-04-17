@@ -35,6 +35,7 @@ ChatGPT-Stacks is a powerful desktop application that allows you to save and cat
 - Export conversations as PNG.
 - Export conversations to Markdown, enabling migration to Obsidian and Notion, etc.
 - Support keyword search within conversation pages.
+- Cancel spell checking in MacOs
 - The project roadmap may be found [here](https://github.com/zhouyangtingwen/chatgpt-stacks/issues/1). If you want more features, please write in this issue 😄
 
 ## Contributing
