@@ -13,6 +13,9 @@
   <a href="https://github.com/zhouyangtingwen/chatgpt-stacks/issues">
     <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="CodeFactor" />
   </a>
+  <a href="https://github.com/zhouyangtingwen/chatgpt-stacks/tags" rel="nofollow">
+    <img alt="GitHub tag (latest SemVer pre-release)" src="https://img.shields.io/github/v/tag/zhouyangtingwen/chatgpt-stacks?include_prereleases&label=version"/>
+  </a>
 </p>
 
 ## Introduction
