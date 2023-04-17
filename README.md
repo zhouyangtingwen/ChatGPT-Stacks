@@ -2,6 +2,9 @@
   <img width="150px" src="./public/icon_256X256@2x.png" alt="ChatGPT-Stacks"><br/>
   <h1 align="center">ChatGPT Stacks</h1>
   <br/>
+</p>
+
+<p align="center">
   <a href="https://github.com/zhouyangtingwen/chatgpt-stacks/blob/master/LICENSE">
     <img alt="GitHub" src="https://img.shields.io/github/license/zhouyangtingwen/chatgpt-stacks"/>
   </a>
@@ -11,9 +14,7 @@
   <a href="https://github.com/zhouyangtingwen/chatgpt-stacks/tags" rel="nofollow">
     <img alt="GitHub tag (latest SemVer pre-release)" src="https://img.shields.io/github/v/tag/zhouyangtingwen/chatgpt-stacks?include_prereleases&label=version"/>
   </a>
-</p>
-
-<p align="center">
+  <br/>
   ChatGPT-Stacks is a desktop application built using Tauri, Vue3, and SQLite3 technologies. The application allows you to save and organize all of your ChatGPT conversations directly to your local SQLite3 database with ease.
   <br/>
   <br/>
