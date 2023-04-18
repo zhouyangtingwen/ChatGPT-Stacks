@@ -69,6 +69,7 @@ const submitCallback = async () => {
     if (nowChooseCateId.value) {
       await app.deleteCategory(nowChooseCateId.value);
       loadChatListDataBySetting();
+      resetData();
       nowChooseCateId.value = '';
       nowChooseType.value = '';
       message.success(t('deleted'));
@@ -76,10 +77,17 @@ const submitCallback = async () => {
   } else if (nowChooseChatId.value) {
     await app.deleteChat(nowChooseChatId.value);
     loadChatListDataBySetting();
+    resetData();
     nowChooseCateId.value = '';
     nowChooseType.value = '';
     message.success(t('deleted'));
   }
+}
+const resetData = () => {
+  app.qaList.value = [];
+  app.fileCheckedIds.value = [];
+  app.breadcrumb.value = [];
+  app.lastUpdateTime.value = 0;
 }
 const cancelCallback = () => {
 
