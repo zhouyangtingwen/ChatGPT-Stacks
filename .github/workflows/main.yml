@@ -12,10 +12,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - build: windows
-            os: windows-latest
-            arch: x86_64
-            target: x86_64-pc-windows-msvc
           - build: macos
             os: macos-latest
             arch: x86_64
@@ -24,6 +20,10 @@ jobs:
             os: macos-latest
             arch: aarch64
             target: aarch64-apple-darwin
+          - build: windows
+            os: windows-latest
+            arch: x86_64
+            target: x86_64-pc-windows-msvc
 
     steps:
       - uses: actions/checkout@v3
@@ -53,19 +53,19 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/upload-artifact@v3
-        if: matrix.os == 'windows-latest'
-        with:
-          name: artifacts-${{ matrix.arch }}
-          path: |
-            ./target/${{ matrix.target }}/release/bundle/msi/**
-
-      - uses: actions/upload-artifact@v3
         if: matrix.os == 'macos-latest'
         with:
           name: artifacts-${{ matrix.arch }}
           path: |
             ./target/${{ matrix.target }}/release/bundle/dmg/**.dmg
             ./target/${{ matrix.target }}/release/bundle/macos/**.app.*
+
+      - uses: actions/upload-artifact@v3
+        if: matrix.os == 'windows-latest'
+        with:
+          name: artifacts-${{ matrix.arch }}
+          path: |
+            ./target/${{ matrix.target }}/release/bundle/msi/**
 
   release-chatgptstacks:
     needs: build-chatgptstacks
@@ -93,10 +93,6 @@ jobs:
 
       - name: Rename artifacts
         run: |
-          mv "artifacts/x86_64/chatgptstacks_${{ env.version }}_x64_en-US.msi" "artifacts/chatgptstacks_${{ env.version }}_windows_x86_64.msi"
-          mv "artifacts/x86_64/chatgptstacks_${{ env.version }}_x64_en-US.msi.zip" "artifacts/chatgptstacks_${{ env.version }}_windows_x86_64.msi.zip"
-          mv "artifacts/x86_64/chatgptstacks_${{ env.version }}_x64_en-US.msi.zip.sig" "artifacts/chatgptstacks_${{ env.version }}_windows_x86_64.msi.zip.sig"
-
           mv "artifacts/aarch64/dmg/chatgptstacks_${{ env.version }}_aarch64.dmg" "artifacts/chatgptstacks_${{ env.version }}_macos_aarch64.dmg"
           mv "artifacts/aarch64/macos/chatgptstacks.app.tar.gz" "artifacts/chatgptstacks_${{ env.version }}_macos_aarch64.app.tar.gz"
           mv "artifacts/aarch64/macos/chatgptstacks.app.tar.gz.sig" "artifacts/chatgptstacks_${{ env.version }}_macos_aarch64.app.tar.gz.sig"
@@ -104,6 +100,10 @@ jobs:
           mv "artifacts/x86_64/dmg/chatgptstacks_${{ env.version }}_x64.dmg" "artifacts/chatgptstacks_${{ env.version }}_macos_x86_64.dmg"
           mv "artifacts/x86_64/macos/chatgptstacks.app.tar.gz" "artifacts/chatgptstacks_${{ env.version }}_macos_x86_64.app.tar.gz"
           mv "artifacts/x86_64/macos/chatgptstacks.app.tar.gz.sig" "artifacts/chatgptstacks_${{ env.version }}_macos_x86_64.app.tar.gz.sig"
+
+          mv "artifacts/x86_64/chatgptstacks_${{ env.version }}_x64_en-US.msi" "artifacts/chatgptstacks_${{ env.version }}_windows_x86_64.msi"
+          mv "artifacts/x86_64/chatgptstacks_${{ env.version }}_x64_en-US.msi.zip" "artifacts/chatgptstacks_${{ env.version }}_windows_x86_64.msi.zip"
+          mv "artifacts/x86_64/chatgptstacks_${{ env.version }}_x64_en-US.msi.zip.sig" "artifacts/chatgptstacks_${{ env.version }}_windows_x86_64.msi.zip.sig"
 
       - name: Create Release
         uses: softprops/action-gh-release@master
