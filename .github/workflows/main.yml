@@ -12,10 +12,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - build: linux
-            os: ubuntu-latest
-            arch: x86_64
-            target: x86_64-unknown-linux-gnu
           - build: macos
             os: macos-latest
             arch: x86_64
@@ -120,10 +116,6 @@ jobs:
           mv "artifacts/x86_64/dmg/chatgptstacks_${{ env.version }}_x64.dmg" "artifacts/chatgptstacks_${{ env.version }}_macos_x86_64.dmg"
           mv "artifacts/x86_64/macos/chatgptstacks.app.tar.gz" "artifacts/chatgptstacks_${{ env.version }}_macos_x86_64.app.tar.gz"
           mv "artifacts/x86_64/macos/chatgptstacks.app.tar.gz.sig" "artifacts/chatgptstacks_${{ env.version }}_macos_x86_64.app.tar.gz.sig"
-
-          mv "artifacts/x86_64/deb/chat-gpt_${{ env.version }}_amd64.deb" "artifacts/x86_64/deb/chatgptstacks_${{ env.version }}_linux_x86_64.deb"
-          mv "artifacts/x86_64/appimage/chat-gpt_${{ env.version }}_amd64.AppImage.tar.gz" "artifacts/chatgptstacks_${{ env.version }}_linux_x86_64.AppImage.tar.gz"
-          mv "artifacts/x86_64/appimage/chat-gpt_${{ env.version }}_amd64.AppImage.tar.gz.sig" "artifacts/chatgptstacks_${{ env.version }}_linux_x86_64.AppImage.tar.gz.sig"
 
           mv "artifacts/x86_64/chatgptstacks_${{ env.version }}_x64_en-US.msi" "artifacts/chatgptstacks_${{ env.version }}_windows_x86_64.msi"
           mv "artifacts/x86_64/chatgptstacks_${{ env.version }}_x64_en-US.msi.zip" "artifacts/chatgptstacks_${{ env.version }}_windows_x86_64.msi.zip"
