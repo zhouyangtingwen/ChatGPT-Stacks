@@ -16,8 +16,12 @@
   <br/>
   ChatGPT-Stacks is a desktop application built with Tauri, Vue3, Naive-UI and SQLite3 that enables you to save your ChatGPT conversations directly to your local SQLite database.
   <br/>
-  https://user-images.githubusercontent.com/130919942/232662181-682a5f1a-118c-43dd-9dda-4633982e2853.mp4
+  
 </p>
+
+https://user-images.githubusercontent.com/130919942/232662330-5d1d7a47-35c3-4922-a5a4-e91dc50a0e28.mp4
+
+
 
 ## Introduction
 
