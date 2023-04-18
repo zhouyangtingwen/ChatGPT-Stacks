@@ -1,19 +1,25 @@
 use tauri::{App, Manager, AppHandle, SystemTrayEvent, SystemTray, CustomMenuItem, SystemTrayMenu, SystemTrayMenuItem};
 
+use tauri::api::shell::open;
+
 pub fn build_tray() -> SystemTray {
-  let version = CustomMenuItem::new("version".to_string(), "版本");
-  let hide = CustomMenuItem::new("hide".to_string(), "隐藏");
-  let show = CustomMenuItem::new("show".to_string(), "显示");
-  let quit = CustomMenuItem::new("quit".to_string(), "退出");
-  let restart = CustomMenuItem::new("restart".to_string(), "重启");
+  let chatgpt_stacks = CustomMenuItem::new("chatgptstacks".to_string(), "ChatGPT-Stacks");
+  let version = CustomMenuItem::new("version".to_string(), "Version");
+  let upgrade = CustomMenuItem::new("upgrade".to_string(), "Upgrade");
+  let hide = CustomMenuItem::new("hide".to_string(), "Hide");
+  let show = CustomMenuItem::new("show".to_string(), "Show");
+  let quit = CustomMenuItem::new("quit".to_string(), "Quit");
+  let restart = CustomMenuItem::new("restart".to_string(), "Restart");
   let tray_menu = SystemTrayMenu::new()
+    .add_item(chatgpt_stacks)
     .add_item(version)
+    .add_item(upgrade)
     .add_native_item(SystemTrayMenuItem::Separator)
     .add_item(hide)
     .add_item(show)
     .add_native_item(SystemTrayMenuItem::Separator)
-    .add_item(quit)
-    .add_item(restart);
+    .add_item(restart)
+    .add_item(quit);
 
   return SystemTray::new().with_menu(tray_menu);
 }
@@ -46,8 +52,23 @@ pub fn handler(app: &AppHandle, event: SystemTrayEvent) {
       }
       SystemTrayEvent::MenuItemClick { id, .. } => {
         match id.as_str() {
+          "chatgptstacks" => {
+            match open(&app.shell_scope(), "https://github.com/zhouyangtingwen/ChatGPT-Stacks", None) {
+              Err(_) => { }
+              Ok(_) => { }
+            }
+          }
           "version" => {
-            // todo...
+            match open(&app.shell_scope(), "https://github.com/zhouyangtingwen/ChatGPT-Stacks", None) {
+              Err(_) => { }
+              Ok(_) => { }
+            }
+          }
+          "upgrade" => {
+            match open(&app.shell_scope(), "https://github.com/zhouyangtingwen/ChatGPT-Stacks", None) {
+              Err(_) => { }
+              Ok(_) => { }
+            }
           }
           "restart" => {
             app.restart();
