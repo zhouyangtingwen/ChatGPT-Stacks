@@ -1,12 +1,8 @@
 <template>
     <div style="width: 100%; display:flex;flex-direction: row;align-items: center;">
-        <n-avatar
-      round
-      :size="25"
-      src="https://07akioni.oss-cn-beijing.aliyuncs.com/07akioni.jpeg"
-    />
+        <n-image :width="40" :height="40" :preview-disabled="true" src="/icon_256X256.png" />
         <n-divider vertical />
-        <n-a href="https://07akioni.oss-cn-beijing.aliyuncs.com/07akioni.jpeg" target="_blank">ChatGPTStacks v1.0.0</n-a>
+        <n-a href="https://github.com/zhouyangtingwen/chatgpt-stacks" target="_blank">ChatGPTStacks (v1.0.0)</n-a>
         <n-divider vertical />
         <n-button circle ghost size="tiny" @click="clearQa">
             <template #icon>
@@ -21,6 +17,9 @@ import { app } from "../app/app.js";
 
 const clearQa = () => {
     app.qaList.value = [];
+    app.fileCheckedIds.value = [];
+    app.breadcrumb.value = [];
+    app.lastUpdateTime.value = 0;
 }
 
 </script>

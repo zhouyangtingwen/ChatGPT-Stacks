@@ -181,9 +181,9 @@ async function init() {
           };
           invoke('save_html', ensureRes).then(async res => {
             if (i18n == 'zh') {
-              _showToast('Success');
-            } else {
               _showToast('成功');
+            } else {
+              _showToast('Success');
             }
             chatgptStacksFormNode.remove();
             for (const qa of document.querySelectorAll("#selectQA")) {
