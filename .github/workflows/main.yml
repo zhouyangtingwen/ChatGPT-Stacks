@@ -1,8 +1,8 @@
 name: "main"
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - master
 
 jobs:
   publish-tauri:
