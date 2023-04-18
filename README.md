@@ -30,6 +30,7 @@ ChatGPT-Stacks is a powerful desktop application that allows you to save and cat
 ## Features
 - Save ChatGPT conversations to local SQLite database
 - Categorize conversations by topic for easy organization
+- Dark Mode 🌌
 - User-friendly interface
 - Simple and intuitive
 
