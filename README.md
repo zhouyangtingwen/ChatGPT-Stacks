@@ -25,14 +25,14 @@ https://user-images.githubusercontent.com/130919942/232662425-431bc008-b648-4435
 
 ## Introduction
 
-ChatGPT-Stacks is a powerful desktop application that enables you to save and categorize all your ChatGPT conversations directly to your local SQLite3 database. you can easily organize and locate your chat content at any time. The application features an intuitive and user-friendly interface, enabling you to quickly and effortlessly save your ChatGPT chats. ChatGPT-Stacks can be used as a local knowledge base, allowing you to easily refer to past conversations and important information whenever you need it. With ChatGPT-Stacks, you can rest assured that all of your valuable chat content is being securely saved and organized based on the topics that matter most to you.
+ChatGPT-Stacks is a powerful desktop application that enables you to save and categorize all your ChatGPT conversations directly to your local SQLite3 database. you can easily organize and locate your chat content at any time. The application features an intuitive and user-friendly interface, enabling you to quickly and effortlessly save your ChatGPT chats. <br>ChatGPT-Stacks can be used as a local knowledge base 📝, allowing you to easily refer to past conversations and important information whenever you need it. With ChatGPT-Stacks, you can rest assured that all of your valuable chat content is being securely saved and organized based on the topics that matter most to you.
 
 ## Features
-- Save ChatGPT conversations to local SQLite database
+- Save ChatGPT conversations to local SQLite database 💾
 - Categorize conversations by topic for easy organization 📚
 - Dark Mode 🌌
 - User-friendly interface 👬
-- Simple and intuitive
+- Simple and intuitive 👌
 
 ## Roadmap
 
