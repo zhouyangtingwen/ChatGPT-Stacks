@@ -34,9 +34,30 @@ ChatGPT-Stacks is a powerful desktop application that enables you to save and ca
 - User-friendly interface 👬
 - Simple and intuitive 👌
 
+## Installation
+For Windows, please download [chatgptstacks_1.0.0_x64_en-US.msi](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases/download/v1.0.0/chatgptstacks_1.0.0_x64_en-US.msi)<br>
+For macOS, please download either [chatgptstacks.app.tar.gz](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases/download/v1.0.0/chatgptstacks.app.tar.gz) or [chatgptstacks_1.0.0_x64.dmg](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases/download/v1.0.0/chatgptstacks_1.0.0_x64.dmg)
+
+<table>
+    <tr>
+        <td>Windows
+        </td>
+        <td>macOS
+        </td>
+    </tr>
+    <tr>
+        <td><img src=https://user-images.githubusercontent.com/130919942/232951179-c2deb94f-cb30-4492-82c0-82aa66cc014a.jpg width=600/></td>
+        <td><img src=https://user-images.githubusercontent.com/130919942/232951203-54f3362c-acfe-4faa-8dd8-5c8ad1cf5c42.jpg width=600/></td>
+    </tr>
+    <tr>
+        <td><img src=https://user-images.githubusercontent.com/130919942/232951511-f18fcef9-2f82-4ed4-be1c-030679429561.jpg width=600/></td>
+        <td><img src=https://user-images.githubusercontent.com/130919942/232961434-2f7e7441-bac9-417b-b58e-39c76727d458.png width=600/></td>
+    </tr>
+</table>
+
 ## Roadmap
 
-### Version 1.0.1
+### Version 1.1.0
 - Export conversations as PNG
 - Export conversations to Markdown, enabling migration to Obsidian and Notion, etc
 - Support keyword search within conversation pages
