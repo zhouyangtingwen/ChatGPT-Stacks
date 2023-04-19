@@ -21,6 +21,14 @@
 [![Windows Support](https://img.shields.io/badge/Windows-0078D6?style=flat&logo=windows&logoColor=white)](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases)
 [![Windows Support](https://img.shields.io/badge/MACOS-adb8c5?style=flat&logo=macos&logoColor=white)](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases)
 </div>
+<div align="center">
+<strong>
+<samp>
+
+[English](README.md) · [简体中文](README.zh-Hans.md)
+</samp>
+</strong>
+</div>
   ChatGPT-Stacks is a desktop application built with Tauri, Vue3, Naive-UI and SQLite3 that enables you to save your ChatGPT conversations directly to your local SQLite database.
   <br/>
   
