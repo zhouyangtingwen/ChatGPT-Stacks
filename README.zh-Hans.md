@@ -39,20 +39,20 @@ https://user-images.githubusercontent.com/130919942/232662425-431bc008-b648-4435
 
 </p>
 
-## Introduction
+## 介绍
 
 ChatGPT-Stacks 是一个功能强大的桌面应用程序，它使您能够将所有 ChatGPT 对话直接保存并分类到本地 SQLite3 数据库中。您可以随时轻松地组织和查找您的聊天内容。该应用程序具有直观和用户友好的界面，使您能够快速轻松地保存您的 ChatGPT 聊天。<br>ChatGPT-Stacks 也可用作本地知识库📝，使您可以在需要时轻松参考过去的对话和重要信息。使用 ChatGPT-Stacks，您可以放心地根据对您最重要的主题安全地保存和组织所有有价值的聊天内容。
 
-## Features
-- Save ChatGPT conversations to local SQLite database 💾
-- Categorize conversations by topic for easy organization 📚
-- Dark Mode 🌌
-- User-friendly interface 👬
-- Simple and intuitive 👌
+## 特性
+- 将所有 ChatGPT 对话直接保存并分类到本地 SQLite3 数据库中 💾
+- 可将保存到本地的 ChatGPT 对话进行分类管理 📚
+- 暗黑模式 🌌
+- 友好的 UI 界面 👬
+- 使用简单，10 秒钟极速上手 👌
 
-## Installation
-For Windows, please download [chatgptstacks_1.0.1_x64_en-US.msi](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases/download/v1.0.1/chatgptstacks_1.0.1_x64_en-US.msi)<br>
-For macOS, please download either [chatgptstacks.app.tar.gz](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases/download/v1.0.1/chatgptstacks.app.tar.gz) or [chatgptstacks_1.0.1_x64.dmg](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases/download/v1.0.1/chatgptstacks_1.0.1_x64.dmg)
+## 安装
+Windows 用户, 请下载 [chatgptstacks_1.0.1_x64_en-US.msi](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases/download/v1.0.1/chatgptstacks_1.0.1_x64_en-US.msi)（因 Tauri 框架特性，Win7 和 2018 年 4 月版本之前的 Win10 需要安装 Webview2 来支持 ChatGPT-Stacks 的运行，如果运行或下载 Webview2 失败，可以先给我提一个 Issue，我会尽快将补丁包发布）<br>
+macOS 用户, 请下载 [chatgptstacks.app.tar.gz](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases/download/v1.0.1/chatgptstacks.app.tar.gz) 或 [chatgptstacks_1.0.1_x64.dmg](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases/download/v1.0.1/chatgptstacks_1.0.1_x64.dmg) （如果 M1、M1X、M2 或 macOS 13等用户无法运行，请给我提 Issue，我会尽快发布补丁包）
 
 <table>
     <tr>
@@ -71,26 +71,25 @@ For macOS, please download either [chatgptstacks.app.tar.gz](https://github.com/
     </tr>
 </table>
 
-## Roadmap
+## 未来开发计划
 
 ### Version 1.1.0
-- Export conversations as PNG
-- Export conversations to Markdown, enabling migration to Obsidian and Notion, etc
-- Support keyword search within conversation pages
-- Automatic update
-- Cancel spell checking in MacOs
-- The project roadmap may be found [here](https://github.com/zhouyangtingwen/chatgpt-stacks/issues/1). If you want more features, please write in this issue 😄
+- 将对话保存为 PNG
+- 将对话导出为 Markdown，方便导入到 Obsidian and Notion
+- 支持在搜索已经保存在本地的对话中，高亮搜索关键字
+- 自动更新
+- 取消 macOS 的拼写检查（可能提前在 v1.0.2 支持）
+- 其他的开发计划在 [这里](https://github.com/zhouyangtingwen/chatgpt-stacks/issues/1). 如果您有更多想法或需求，请在这个 Issue 下面留言 😄
 
-## Contributing
-We welcome contributions to ChatGPT-Stacks! To contribute, please follow the steps below:
+## 贡献
+欢迎对 ChatGPT-Stacks 的贡献！在这之前，请看以下步骤：
 
-1. Fork this repository
-1. Create a new branch for your contribution
-1. Make your changes
-1. Submit a pull request
+1. Fork 这个项目
+1. 为您的贡献创建一个新分支
+1. 做出您的更改
+1. 提交 pull requests
 
-## Like this project?
-If you found this project helpful, please give it a star🌟 to show your support!
-
+## ChatGPT-Stacks 可以帮助到您吗?
+如果 ChatGPT-Stacks 帮助到了您，解决了您的痛点或满足了您的需求，请为它点一个 Star🌟 吧！万分感谢！🙏 ChatGPT-Stacks 将继续努力变得更好！
 ## License
 This project is licensed under the terms of the GPL-3.0 license.
