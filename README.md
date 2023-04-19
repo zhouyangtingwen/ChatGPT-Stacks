@@ -42,8 +42,8 @@ ChatGPT-Stacks is a powerful desktop application that enables you to save and ca
 - Simple and intuitive 👌
 
 ## Installation
-For Windows, please download [chatgptstacks_1.0.0_x64_en-US.msi](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases/download/v1.0.0/chatgptstacks_1.0.0_x64_en-US.msi)<br>
-For macOS, please download either [chatgptstacks.app.tar.gz](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases/download/v1.0.0/chatgptstacks.app.tar.gz) or [chatgptstacks_1.0.0_x64.dmg](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases/download/v1.0.0/chatgptstacks_1.0.0_x64.dmg)
+For Windows, please download [chatgptstacks_1.0.1_x64_en-US.msi](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases/download/v1.0.1/chatgptstacks_1.0.1_x64_en-US.msi)<br>
+For macOS, please download either [chatgptstacks.app.tar.gz](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases/download/v1.0.1/chatgptstacks.app.tar.gz) or [chatgptstacks_1.0.1_x64.dmg](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases/download/v1.0.1/chatgptstacks_1.0.1_x64.dmg)
 
 <table>
     <tr>
