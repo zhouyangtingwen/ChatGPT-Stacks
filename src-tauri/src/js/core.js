@@ -51,7 +51,6 @@ async function init() {
     }
   });
 
-  document.addEventListener("keydown", (e) => { if(e.keyCode == 229) e.stopPropagation(); }, true)
   if (window.location.host === 'chat.openai.com') {
     
   }
