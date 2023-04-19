@@ -10,6 +10,9 @@
   <a href="https://github.com/zhouyangtingwen/chatgpt-stacks/issues">
     <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="CodeFactor" />
   </a>
+  <a href="https://github.com/zhouyangtingwen/ChatGPT-Stacks/actions/workflows/main.yml" rel="nofollow">
+    <img src="https://img.shields.io/github/actions/workflow/status/zhouyangtingwen/ChatGPT-Stacks/main.yml?branch=master&logo=Github" alt="Build" />
+  </a>
   <a href="https://github.com/zhouyangtingwen/chatgpt-stacks/tags" rel="nofollow">
     <img alt="GitHub tag (latest SemVer pre-release)" src="https://img.shields.io/github/v/tag/zhouyangtingwen/chatgpt-stacks?include_prereleases&label=version"/>
   </a>
