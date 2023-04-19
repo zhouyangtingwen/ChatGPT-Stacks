@@ -17,9 +17,10 @@
     <img alt="GitHub tag (latest SemVer pre-release)" src="https://img.shields.io/github/v/tag/zhouyangtingwen/chatgpt-stacks?include_prereleases&label=version"/>
   </a>
   <div align="center">
-
+  
 [![Windows Support](https://img.shields.io/badge/Windows-0078D6?style=flat&logo=windows&logoColor=white)](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases)
 [![Windows Support](https://img.shields.io/badge/MACOS-adb8c5?style=flat&logo=macos&logoColor=white)](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases)
+[![Download Counts](https://img.shields.io/github/downloads/zhouyangtingwen/ChatGPT-Stacks/total?style=flat)](https://github.com/zhouyangtingwen/ChatGPT-Stacks/releases)
 </div>
 <div align="center">
 <strong>
