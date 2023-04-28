@@ -89,7 +89,8 @@ We welcome contributions to ChatGPT-Stacks! To contribute, please follow the ste
 1. Make your changes
 1. Submit a pull request
 
-https://star-history.com/#zhouyangtingwen/ChatGPT-Stacks
+## Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=zhouyangtingwen/ChatGPT-Stacks&type=Date)](https://star-history.com/#zhouyangtingwen/ChatGPT-Stacks)
 
 ## Like this project?
 If you found this project helpful, please give it a star🌟 to show your support!
