@@ -27,8 +27,9 @@ const i18n = createI18n({
 
       fileSettingsDelCategory: 'Delete category',
       fileSettingsDelConversation: 'Delete conversation',
-      fileOptionRename: 'rename',
-      fileOptionDelete: 'delete',
+      fileOptionRename: 'Rename',
+      fileOptionMove: 'Move To...',
+      fileOptionDelete: 'Delete',
 
       filesDelCategoryEnsure: 'Confirm deletion of category? (All conversations under this category will also be deleted)',
       filesDelConversationEnsure: 'Confirm deletion of conversation?',
@@ -74,6 +75,7 @@ const i18n = createI18n({
       fileSettingsDelCategory: '删除分类',
       fileSettingsDelConversation: '删除对话',
       fileOptionRename: '重命名',
+      fileOptionMove: '移动到...',
       fileOptionDelete: '删除',
 
       filesDelCategoryEnsure: '确认删除分类?(该分类下所有对话也会删除)',
