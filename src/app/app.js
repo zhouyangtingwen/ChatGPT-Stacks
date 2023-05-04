@@ -149,12 +149,14 @@ class App {
         if (open) {
             this.theme.value = darkTheme;
             this.themeSwitch.value = true;
+            document.documentElement.setAttribute('data-theme', 'dark');
             if (set) {
               this.setSetting('chat_theme', 'dark')
             }
         } else {
             this.theme.value = undefined;
             this.themeSwitch.value = false;
+            document.documentElement.setAttribute('data-theme', 'light');
             if (set) {
               this.setSetting('chat_theme', 'light')
             }
