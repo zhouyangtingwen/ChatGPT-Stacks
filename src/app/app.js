@@ -21,6 +21,8 @@ class App {
    
         this.showSearch = ref(false);
         this.showCreateCategory = ref(false);
+        this.showImportChat = ref(false);
+        this.showImportChatFileDrop = ref([]);
 
         this.createCategoryType = ref('create');
         this.createCategorySince = ref('chat');
@@ -32,6 +34,13 @@ class App {
         this.fileList = ref([]);
         this.lastUpdateTime = ref(0);
         this.fileCheckedIds = ref([]);
+
+        listen('tauri://file-drop', async (event) => {
+          if (this.showImportChat.value) {
+            this.showImportChatFileDrop.value = event;
+          }
+          // console.log(event);
+        });
 
         listen('refresh_temp', (e) => {
           if (this.fileCheckedIds.value.length > 0) {
@@ -97,6 +106,14 @@ class App {
           this.getChatDetail(chatId);
         }
       }
+    }
+
+    saveHtml(chatId, name, category, html) {
+      return api.saveHtml(chatId, name, category, html)
+    }
+
+    getCategoryList() {
+      return api.getCategoryList();
     }
 
     async getChatDetail(chatId) {

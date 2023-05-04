@@ -123,6 +123,8 @@ const handleSelect = (e) => {
       nowChooseChatId.value = '';
       nowChooseChatName.value = '';
     }
+  } else if (e == 'move') {
+
   } else if (e == 'delete') {
     if (nowChooseType.value == 'cate') {
       delContent.value = t('filesDelCategoryEnsure');
@@ -159,23 +161,30 @@ const nodeProps = ({ option }) => {
       e.preventDefault();
     },
     onContextmenu(e) {
+      let options = [];
       if (option.isLeaf) {
         nowChooseChatId.value = option.key;
         nowChooseChatName.value = option.label;
         nowChooseType.value = 'chat';
+        options = [{
+          "label": t('fileOptionRename'), "key": "rename",
+        }, {
+          "label": t('fileOptionMove'), "key": "move",
+        }, {
+          'label': t('fileOptionDelete'), 'key': 'delete',
+        }]
       } else {
         nowChooseCateId.value = option.key;
         nowChooseCateName.value = option.label;
         nowChooseType.value = 'cate';
+        options = [{
+          "label": t('fileOptionRename'), "key": "rename",
+        }, {
+          'label': t('fileOptionDelete'), 'key': 'delete',
+        }]
       }
 
-      optionsRef.value = [{
-        "label": t('fileOptionRename'),
-        "key": "rename",
-      }, {
-        'label': t('fileOptionDelete'),
-        'key': 'delete',
-      }];
+      optionsRef.value = options;
       showDropdownRef.value = true;
       xRef.value = e.clientX;
       yRef.value = e.clientY;

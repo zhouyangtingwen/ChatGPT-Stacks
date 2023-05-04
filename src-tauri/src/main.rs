@@ -30,6 +30,7 @@ fn main() {
             api::get_chat,
             api::get_chat_detail,
             api::get_chat_list,
+            api::update_qa_category,
             api::update_qa_chat,
             api::delete_qa_chat,
             api::delete_one_qa

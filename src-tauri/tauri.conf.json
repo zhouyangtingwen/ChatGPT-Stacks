@@ -67,7 +67,7 @@
         "width": 1000,
         "hiddenTitle": false,
         "transparent": false,
-        "fileDropEnabled":false,
+        "fileDropEnabled": true,
         "visible": true
       }
     ],

@@ -9,6 +9,8 @@ const i18n = createI18n({
       openChatgpt: 'Open ChatGPT',
       create: 'Create ',
       update: 'Update ',
+      cancel: 'Cancel',
+      title: 'Title',
       category: 'Category',
       conversation: 'conversation',
       submit: 'submit',
@@ -18,6 +20,11 @@ const i18n = createI18n({
 
       searchRes: 'There are %s results in %s files.',
 
+      fileSettingsImportChat: 'Import Conversations',
+      fileDropImportChat: 'Click or drag your conversations.json file to this area to import conversations',
+      fileDropImportChatErr: 'Please click or drag your conversations.json file to this area to import conversations',
+      fileDropImportChatSave: 'Import',
+      fileDropImportChatDefaultCategory: 'Import into this category by default',
       fileSettingsCreateCategory: 'Create a new category',
       fileSettingsCreateCategoryTitle: 'Create a new category',
       fileSettingsCreateCategoryPlaceholder1: 'Enter the name of the conversation you want to create',
@@ -56,6 +63,8 @@ const i18n = createI18n({
       openChatgpt: '打开 ChatGPT',
       create: '创建',
       update: '更新',
+      cancel: '取消',
+      title: '标题',
       category: '分类',
       conversation: '对话',
       submit: '提交',
@@ -65,6 +74,11 @@ const i18n = createI18n({
 
       searchRes: '<span style="color: #19c37d">%s</span> 个文件中有 <span style="color: #19c37d">%s</span> 个结果',
 
+      fileSettingsImportChat: '导入对话',
+      fileDropImportChat: '单击或将您的 Conversations.json 文件拖到此区域以导入对话',
+      fileDropImportChatErr: '请单击或将您的 Conversations.json 文件拖到此区域以导入对话',
+      fileDropImportChatSave: '导入',
+      fileDropImportChatDefaultCategory: '默认导入到该分类',
       fileSettingsCreateCategory: '新建分类',
       fileSettingsCreateCategoryTitle: '新建分类',
       fileSettingsCreateCategoryPlaceholder1: '输入你想创建的对话名称',

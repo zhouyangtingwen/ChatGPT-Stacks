@@ -1,15 +1,16 @@
 <template>
     <n-card class="varborder" :bordered="false" style="position: fixed; width: 270px; top:60px;left: 0;z-index: 999;" :content-style="{padding: '20px 0'}">
       <div style="display:flex; justify-content: space-between; padding: 0 15px;">
-        <n-tooltip v-if="false" placement="bottom" :show-arrow="false" trigger="hover">
+        <n-tooltip placement="bottom" :show-arrow="false" trigger="hover">
           <template #trigger>
-            <n-button size="small" circle @click="showCreateCategory('chat')">
+            <n-button size="small" circle @click="showImportChat">
               <template #icon>
-                <n-icon :component="AddSharp" />
+                <!-- <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20"><g fill="none"><path d="M6.614 3.143a.75.75 0 1 1 .772-1.286c1.347.808 2.34 1.785 2.98 3.135c.63 1.33.884 2.955.884 5.008v5.44l2.72-2.72a.75.75 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 1.06-1.06l2.72 2.72V10c0-1.947-.245-3.321-.74-4.366c-.486-1.026-1.243-1.799-2.396-2.49z" fill="currentColor"></path></g></svg> -->
+                <n-icon :component="ArchiveIcon"></n-icon>
               </template>
             </n-button>
           </template>
-          新建对话
+          {{ t('fileSettingsImportChat') }}
         </n-tooltip>
 
         <n-tooltip placement="bottom" :show-arrow="false" trigger="hover">
@@ -103,13 +104,17 @@
 <script setup>
 import { app } from "../app/app.js";
 import { ref, onMounted } from "vue";
-import { Refresh, Search, ArrowBack, ReorderFourOutline, ArrowForward, DuplicateOutline, AddSharp } from '@vicons/ionicons5'
+import { Refresh, Search, ArrowBack, ReorderFourOutline, ArrowForward, DuplicateOutline, AddSharp, ArchiveOutline as ArchiveIcon } from '@vicons/ionicons5'
 
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 
 const iconR = ref(ArrowBack);
 const sortVal = ref('asc');
+
+const showImportChat = () => {
+  app.showImportChat.value = true;
+}
 
 const showCreateCategory = (since) => {
   app.createCategorySince.value = since;

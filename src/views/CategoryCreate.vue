@@ -1,5 +1,6 @@
 <template>
   <n-card
+    class="no-select"
     :bordered="false"
     size="huge"
     role="dialog"

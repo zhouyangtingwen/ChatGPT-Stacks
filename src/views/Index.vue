@@ -50,6 +50,10 @@
         <CategoryCreate @createResListen="handleCreateRes"></CategoryCreate>
       </n-modal>
 
+      <n-modal v-model:show="showImportChat" transform-origin="center">
+        <ImportConversations></ImportConversations>
+      </n-modal>
+
     </n-message-provider>
   </n-config-provider>
 </template>
@@ -66,12 +70,14 @@ import Search from "./Search.vue";
 import Breadcrumb from "./Breadcrumb.vue";
 import Info from "./Info.vue";
 import CategoryCreate from "./CategoryCreate.vue";
+import ImportConversations from "./ImportConversations.vue";
 import I18n from "./I18n.vue";
 
 import { app } from "../app/app.js";
 const appTheme = app.theme;
 const showSearch = app.showSearch;
 const showCreateCategory = app.showCreateCategory;
+const showImportChat = app.showImportChat;
 
 const FilesRef = ref();
 

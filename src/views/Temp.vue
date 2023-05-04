@@ -45,7 +45,7 @@
         </div>
 
         <div v-else v-for="qaItem in qaList" class="flex flex-col items-center text-sm dark:bg-gray-800">
-            <template v-if="qaItem.typed == 1">
+            <template v-if="qaItem.typed == 1 || qaItem.typed == 3">
                 <div class="group w-full text-gray-800 dark:text-gray-100 border-b border-black/10 dark:border-gray-900/50 dark:bg-gray-800">
                     <div class="text-base gap-4 md:gap-6 md:max-w-2xl lg:max-w-2xl xl:max-w-3xl p-4 md:py-6 flex lg:px-0 m-auto">
                         <div class="w-[30px] flex flex-col relative items-end">
@@ -92,7 +92,8 @@
                             <!-- </div> -->
                         </div>
                         <div class="relative flex w-[calc(100%-50px)] flex-col gap-1 md:gap-3 lg:w-[calc(100%-115px)]">
-                            <div class="flex flex-grow flex-col gap-3">
+                            <v-md-preview v-if="qaItem.typed == 4" style="padding: 0;" :text="qaItem.html_origin"></v-md-preview>
+                            <div v-else class="flex flex-grow flex-col gap-3">
                                 <div class="min-h-[20px] flex flex-col items-start gap-4 whitespace-pre-wrap">
                                     <div class="markdown prose w-full break-words dark:prose-invert light" v-html="qaItem.html_origin"></div>
                                 </div>
@@ -192,6 +193,10 @@ const defaultQa = [
 </script>
 
 <style>
+.vuepress-markdown-body:not(.custom) {
+    padding: 0 !important;
+}
+
 *,:after,:before {
     /* border: 0 solid var(--n-text-color); */
     box-sizing: border-box
