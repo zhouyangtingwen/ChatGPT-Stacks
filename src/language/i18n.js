@@ -50,6 +50,9 @@ const i18n = createI18n({
       tempDelQaNegativeText: 'no',
       tempDelSuccess: 'Conversation deleted successfully',
       tempConversationUpdateTime: 'Conversation update time',
+      // tempConversationUpdateTime: 'Update time',
+      tempGenImage: 'Generate Image',
+      tempGenPdf: 'Generate PDF',
       copySuccess: 'Copy succeeded',
       copyFailed: 'Nothing to copy',
 
@@ -104,6 +107,9 @@ const i18n = createI18n({
       tempDelQaNegativeText: '算了',
       tempDelSuccess: '对话删除成功',
       tempConversationUpdateTime: '对话更新时间',
+      // tempConversationUpdateTime: '更新时间',
+      tempGenImage: '生成图片',
+      tempGenPdf: '生成 PDF',
       copySuccess: '复制成功',
       copyFailed: '未找到可复制文字',
 
