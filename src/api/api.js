@@ -1,6 +1,7 @@
 import { invoke } from "@tauri-apps/api/tauri";
 
 const api = {
+    getChat: (chatId) => invoke('get_chat', {chatId: chatId}),
     getChatList: (sortStr) => invoke('get_chat_list', {sort: sortStr}),
     getSetting: (k) => invoke('get_setting', {k: k}),
     setSetting: (k, v) => invoke('set_setting', {k: k, v: v}),

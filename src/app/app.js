@@ -24,6 +24,8 @@ class App {
         this.showImportChat = ref(false);
         this.showImportChatFileDrop = ref([]);
 
+        this.showMoveTo = ref(false);
+
         this.createCategoryType = ref('create');
         this.createCategorySince = ref('chat');
         this.createCategoryId = ref('');
@@ -108,12 +110,20 @@ class App {
       }
     }
 
+    async updateChatCategory(chatId, cate) {
+      return api.updateChatCategory(chatId, cate)
+    }
+
     saveHtml(chatId, name, category, html) {
       return api.saveHtml(chatId, name, category, html)
     }
 
     getCategoryList() {
       return api.getCategoryList();
+    }
+
+    async getChat(chatId) {
+      return api.getChat(chatId);
     }
 
     async getChatDetail(chatId) {

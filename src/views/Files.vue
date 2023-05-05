@@ -124,7 +124,9 @@ const handleSelect = (e) => {
       nowChooseChatName.value = '';
     }
   } else if (e == 'move') {
-
+    app.createCategoryId.value = nowChooseChatId.value;
+    app.showMoveTo.value = true;
+    nowChooseChatId.value = '';
   } else if (e == 'delete') {
     if (nowChooseType.value == 'cate') {
       delContent.value = t('filesDelCategoryEnsure');

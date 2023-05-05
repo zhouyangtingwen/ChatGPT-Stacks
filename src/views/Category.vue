@@ -1,7 +1,7 @@
 <template>
   <n-select
     :placeholder="t('category')"
-    :options="props.options.value"
+    :options="props.options"
     @update:value="handleUpdateValue"
     v-model:value="props.default"
     :default-value="props.default"

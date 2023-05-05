@@ -92,7 +92,7 @@ const columns = ref([
           h(Category, {
             id: 'title',
             default: defalutCategoryId,
-            options: options,
+            options: options.value,
             onSelectCategory: selectCategoryHandle,
           }, () => { }),
       ]);
@@ -102,7 +102,7 @@ const columns = ref([
       return h(Category, {
         id: idx,
         default: val.category,
-        options: options,
+        options: options.value,
         onSelectCategory: selectCategoryHandle,
       }, () => {});
     }
