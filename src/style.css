@@ -36,3 +36,18 @@ body {
   width: 30px !important;
   height: 30px !important;
 }
+
+:root {
+  --temp-background-color: #fff;
+  --temp-text-color: #2c3e50;
+}
+
+[data-theme="dark"] {
+  --temp-background-color: transparent;
+  --temp-text-color: #f0f0f0;
+}
+
+.vuepress-markdown-body {
+  background-color: var(--temp-background-color) !important;
+  color: var(--temp-text-color) !important;
+}

@@ -250,6 +250,19 @@ pub fn delete_category(mut id: i32) -> Result<String, String> {
 }
 
 #[tauri::command]
+pub fn update_qa_category(chat_id: &str, cate: &str) -> Result<String, String> {
+  let conn = get_db_conn();
+
+  let chat = get_one_chat(&conn, chat_id);
+  if chat.name.is_empty() {
+    Err(String::from("something error"))
+  } else {
+    insert_one_chat(&conn, chat_id, chat.name.as_str(), cate);
+    Ok(String::from("ok"))
+  }
+}
+
+#[tauri::command]
 pub fn create_qa_chat(chat_id: &str, name: &str, cate: &str) {
   let conn = get_db_conn();
   insert_one_chat(&conn, chat_id, name, cate);

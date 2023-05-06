@@ -12,7 +12,10 @@
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "all": true,
+      "fs": {
+        "scope": ["**"]
+      }
     },
     "bundle": {
       "active": true,
@@ -67,7 +70,7 @@
         "width": 1000,
         "hiddenTitle": false,
         "transparent": false,
-        "fileDropEnabled":false,
+        "fileDropEnabled": true,
         "visible": true
       }
     ],

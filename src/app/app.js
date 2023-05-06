@@ -21,6 +21,10 @@ class App {
    
         this.showSearch = ref(false);
         this.showCreateCategory = ref(false);
+        this.showImportChat = ref(false);
+        this.showImportChatFileDrop = ref([]);
+
+        this.showMoveTo = ref(false);
 
         this.createCategoryType = ref('create');
         this.createCategorySince = ref('chat');
@@ -32,6 +36,13 @@ class App {
         this.fileList = ref([]);
         this.lastUpdateTime = ref(0);
         this.fileCheckedIds = ref([]);
+
+        listen('tauri://file-drop', async (event) => {
+          if (this.showImportChat.value) {
+            this.showImportChatFileDrop.value = event;
+          }
+          // console.log(event);
+        });
 
         listen('refresh_temp', (e) => {
           if (this.fileCheckedIds.value.length > 0) {
@@ -99,6 +110,22 @@ class App {
       }
     }
 
+    async updateChatCategory(chatId, cate) {
+      return api.updateChatCategory(chatId, cate)
+    }
+
+    saveHtml(chatId, name, category, html) {
+      return api.saveHtml(chatId, name, category, html)
+    }
+
+    getCategoryList() {
+      return api.getCategoryList();
+    }
+
+    async getChat(chatId) {
+      return api.getChat(chatId);
+    }
+
     async getChatDetail(chatId) {
       try {
         let res = await api.getChatDetail(chatId);
@@ -132,12 +159,14 @@ class App {
         if (open) {
             this.theme.value = darkTheme;
             this.themeSwitch.value = true;
+            document.documentElement.setAttribute('data-theme', 'dark');
             if (set) {
               this.setSetting('chat_theme', 'dark')
             }
         } else {
             this.theme.value = undefined;
             this.themeSwitch.value = false;
+            document.documentElement.setAttribute('data-theme', 'light');
             if (set) {
               this.setSetting('chat_theme', 'light')
             }

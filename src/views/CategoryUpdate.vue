@@ -9,7 +9,7 @@
   >
     <template #header>
       <div style="display: flex;align-items: center;justify-content: space-between;">
-        <n-text tag="div">{{ type == 'create' ? t('create') : t('update') }}{{ since == 'chat' ? t('conversation') : t('category') }}</n-text>
+        <n-text tag="div">{{ t('fileOptionMove') }}</n-text>
         <n-button size="small" quaternary circle @click="app.showCreateCategory.value = false">
           <template #icon>
             <n-icon :component="CloseOutline" />
@@ -18,13 +18,7 @@
       </div>
     </template>
 
-    <n-input 
-      ref="cInput"
-      v-model:value="name" 
-      type="text" 
-      :placeholder="type == 'create' ? (since == 'chat' ? t('fileSettingsCreateCategoryPlaceholder1') : t('fileSettingsCreateCategoryPlaceholder3')) : (since == 'chat' ? t('fileSettingsCreateCategoryPlaceholder2') : t('fileSettingsCreateCategoryPlaceholder4'))" 
-      autofocus
-      />
+    <Category :id="1" :default="defalutCategoryId" :options="options" @selectCategory="moveHandle"></Category>
 
     <template #footer>
       <div style="width: 100%;display: flex;justify-content: flex-end;">
@@ -39,44 +33,44 @@ import { ref, onMounted, nextTick } from "vue";
 import { app } from "../app/app.js";
 import { CloseOutline } from "@vicons/ionicons5";
 import { useMessage } from 'naive-ui';
+import Category from "./Category.vue";
 
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 
-const cInput = ref();
-const type = app.createCategoryType;
-const since = app.createCategorySince;
-
 const emit = defineEmits(['createResListen']);
 
 const message = useMessage();
-const name = ref('');
+const moveHandle = (v) => {
+  defalutCategoryId.value = v.v;
+}
 const ensure = async () => {
   try {
-    if (app.createCategoryType.value == 'update') {
-      if (app.createCategorySince.value == 'chat') {
-        await app.updateChat(app.createCategoryId.value, name.value);
-      } else {
-        await app.updateCategory(app.createCategoryId.value, name.value);
-      }
-    } else {
-      await app.createCategory(name.value);
-    }
+    await app.updateChatCategory(app.createCategoryId.value, defalutCategoryId.value + '');
+
     emit('createResListen');
     message.success(t('successfully'));
-    app.showCreateCategory.value = false;
+    app.showMoveTo.value = false;
   } catch (e) {
     message.warning(e);
   }
 }
 
-onMounted(() => {
-  nextTick(() => {
-    if (app.createCategoryType.value == 'update') {
-      name.value = app.createCategoryName.value;
-    }
-
-    cInput.value.focus();
+const defalutCategoryId = ref('1');
+const options = ref([]);
+onMounted(async () => {
+  await nextTick(async () => {
+    let c = await app.getChat(app.createCategoryId.value);
+    defalutCategoryId.value = c.category
   });
+  options.value = [];
+  let categoryList = await app.getCategoryList();
+  categoryList.forEach(item => {
+    options.value.push({
+      label: item.name,
+      value: item.id
+    });
+  })
+  console.log('coa', options)
 });
 </script>

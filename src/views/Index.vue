@@ -24,7 +24,7 @@
             <Files ref="FilesRef"></Files>
           </n-layout-sider>
           <n-layout content-style="" :native-scrollbar="false">
-            <Temp></Temp>
+            <Temp ref="TempRef"></Temp>
           </n-layout>
         </n-layout>
         <n-layout-footer
@@ -37,7 +37,7 @@
             <Breadcrumb></Breadcrumb>
           </div>
           <div>
-            <Info></Info>
+            <Info @gen="gen"></Info>
           </div>
         </n-layout-footer>
       </n-layout>
@@ -48,6 +48,14 @@
 
       <n-modal v-model:show="showCreateCategory" transform-origin="center">
         <CategoryCreate @createResListen="handleCreateRes"></CategoryCreate>
+      </n-modal>
+
+      <n-modal v-model:show="showMoveTo" transform-origin="center">
+        <CategoryUpdate @createResListen="handleCreateRes"></CategoryUpdate>
+      </n-modal>
+
+      <n-modal v-model:show="showImportChat" transform-origin="center">
+        <ImportConversations></ImportConversations>
       </n-modal>
 
     </n-message-provider>
@@ -66,14 +74,26 @@ import Search from "./Search.vue";
 import Breadcrumb from "./Breadcrumb.vue";
 import Info from "./Info.vue";
 import CategoryCreate from "./CategoryCreate.vue";
+import CategoryUpdate from "./CategoryUpdate.vue";
+import ImportConversations from "./ImportConversations.vue";
 import I18n from "./I18n.vue";
 
 import { app } from "../app/app.js";
 const appTheme = app.theme;
 const showSearch = app.showSearch;
 const showCreateCategory = app.showCreateCategory;
+const showMoveTo = app.showMoveTo;
+const showImportChat = app.showImportChat;
 
 const FilesRef = ref();
+const TempRef = ref();
+
+const gen = (type) => {
+  console.log('type', type)
+  nextTick(() => {
+    TempRef.value.genImage(type);
+  });
+}
 
 const handleCreateRes = () => {
   nextTick(() => {
