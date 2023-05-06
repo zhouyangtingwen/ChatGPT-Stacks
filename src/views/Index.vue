@@ -24,7 +24,7 @@
             <Files ref="FilesRef"></Files>
           </n-layout-sider>
           <n-layout content-style="" :native-scrollbar="false">
-            <Temp></Temp>
+            <Temp ref="TempRef"></Temp>
           </n-layout>
         </n-layout>
         <n-layout-footer
@@ -37,7 +37,7 @@
             <Breadcrumb></Breadcrumb>
           </div>
           <div>
-            <Info></Info>
+            <Info @gen="gen"></Info>
           </div>
         </n-layout-footer>
       </n-layout>
@@ -86,6 +86,14 @@ const showMoveTo = app.showMoveTo;
 const showImportChat = app.showImportChat;
 
 const FilesRef = ref();
+const TempRef = ref();
+
+const gen = (type) => {
+  console.log('type', type)
+  nextTick(() => {
+    TempRef.value.genImage(type);
+  });
+}
 
 const handleCreateRes = () => {
   nextTick(() => {
