@@ -2,7 +2,7 @@
     <div style="width: 100%; display:flex;flex-direction: row;align-items: center;">
         <n-image :width="40" :height="40" :preview-disabled="true" src="/icon_256X256.png" />
         <n-divider vertical />
-        <n-a href="https://github.com/zhouyangtingwen/chatgpt-stacks" target="_blank">ChatGPTStacks (v1.0.0)</n-a>
+        <n-a href="https://github.com/zhouyangtingwen/chatgpt-stacks" target="_blank">ChatGPTStacks (v1.0.2)</n-a>
         <n-divider vertical />
         <n-button circle ghost size="tiny" @click="clearQa">
             <template #icon>
