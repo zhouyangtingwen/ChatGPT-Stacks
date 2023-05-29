@@ -1,7 +1,7 @@
 {
   "name": "chatgptstacks",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.5",
   "type": "module",
   "scripts": {
     "dev": "vite",
