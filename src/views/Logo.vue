@@ -35,7 +35,7 @@ const clearQa = () => {
 }
 
 const updateJs = async () => {
-    const isDev = true;
+    const isDev = false;
     if (isDev) {
         console.log('dev can not update');
         return;
