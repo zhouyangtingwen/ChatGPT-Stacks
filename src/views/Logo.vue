@@ -26,6 +26,9 @@ import {
 import { relaunch } from '@tauri-apps/api/process'
 import { type as tauriPlatform } from '@tauri-apps/api/os';
 import { onMounted } from "vue";
+import { useMessage } from 'naive-ui';
+
+const message = useMessage();
 
 const clearQa = () => {
     app.qaList.value = [];
@@ -45,16 +48,19 @@ const updateJs = async () => {
 
       if (shouldUpdate) {
         // You could show a dialog asking the user if they want to install the update here.
-        console.log(
-          `Installing update ${manifest?.version}, ${manifest?.date}, ${manifest?.body}`
-        )
+        var updateDesc = `Installing update ${manifest?.version}, ${manifest?.date}, ${manifest?.body}`;
+        message.success(updateDesc);
+        console.log(updateDesc);
         let p = await tauriPlatform();
 
         // Install the update. This will also restart the app on Windows!
+        message.success('update start');
         await installUpdate();
 
+        message.success('update end');
         console.log('p!!', p);
         if (p == 'Darwin' || p == 'Linux') {
+            message.success('relanuch');
             console.log('relanuch');
             // On macOS and Linux you will need to restart the app manually.
             // You could use this step to display another confirmation dialog.
